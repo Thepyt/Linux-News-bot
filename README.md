@@ -98,3 +98,11 @@ The bot's token is stored in an `env` file which can be accessed using the `os.g
 Currently
 - Finding ways to host the bot in a server are underway
 - Fixing the code
+
+## Resources and Useful Links
+<ol>
+    <li><a href="https://www.freecodecamp.org/news/create-a-discord-bot-with-python/">freecodecamp</a></li>
+    <li><a href="https://requests.readthedocs.io/en/latest/">Requests</a></li>
+    <li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a></li>
+    <li><a href="https://stackoverflow.com/questions/76256539/how-do-i-auto-send-a-message-using-discord-py">Discord auto send</a></li>
+</ol>
