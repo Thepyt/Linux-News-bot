@@ -1,0 +1,131 @@
+{
+    "omg" : {
+        "url" : "https://www.omgubuntu.co.uk/",
+        "number" : 2,
+        
+        "home-page" : {
+            "tag" : "div",
+            "class" : "homepage-layout tile-layout"
+        },
+
+        "Link" : {
+            "tag" : "a",
+            "count" : [0, 3],
+            "Data" : {
+                "Title" : "aria-label",
+                "replace" : ["Read ", ""],
+                "Url" : "href",
+                "Url-incomplete" : false
+            }
+        },
+
+        "Paragraph" : {
+            "tag" : "p",
+            "count" : [0, 1]
+        }
+    },
+
+    "ifoss" : {
+        "url" : "https://itsfoss.com/",
+        "number" : 2,
+        
+        "home-page" : {
+            "tag" : "div",
+            "class" : "container wrapper"
+        },
+
+        "Link" : {
+            "tag" : "a",
+            "count" : [3, 8],
+            "Data" : {
+                "Title" : "aria-label",
+                "replace" : ["FOSS Weekly ", ""],
+                "Url" : "href",
+                "Url-incomplete" : false
+            }
+        },
+
+        "Paragraph" : {
+            "tag" : "p",
+            "count" : [0, 1]
+        }
+    },
+
+    "925" : {
+        "url" : "https://9to5linux.com/",
+        "number" : 2,
+        
+        "home-page" : {
+            "tag" : "div",
+            "id" : "blog-entries"
+        },
+
+        "Link" : {
+            "tag" : "a",
+            "count" : [1, 4],
+            "Data" : {
+                "Title" : "get",
+                "replace" : ["", ""],
+                "Url" : "href",
+                "Url-incomplete" : false
+            }
+        },
+
+        "Paragraph" : {
+            "tag" : "p",
+            "count" : [3, 4]
+        }
+    },
+
+    "point" : {
+        "url" : "https://pointieststick.com/",
+        "number" : 2,
+        
+        "home-page" : {
+            "tag" : "div",
+            "id" : "primary"
+        },
+
+        "Link" : {
+            "tag" : "a",
+            "count" : [0, 36],
+            "Data" : {
+                "Title" : "get",
+                "replace" : ["", ""],
+                "Url" : "href",
+                "Url-incomplete" : false
+            }
+        },
+
+        "Paragraph" : {
+            "tag" : "p",
+            "count" : [0, 1]
+        }
+    },
+
+    "news" : {
+        "url" : "https://news.itsfoss.com/",
+        "number" : 2,
+        
+        "home-page" : {
+            "tag" : "div",
+            "class" : "right c-stack-stories"
+        },
+
+        "Link" : {
+            "tag" : "a",
+            "count" : [2, 6],
+            "Data" : {
+                "Title" : "get",
+                "replace" : ["", ""],
+                "Url" : "href",
+                "Url-incomplete" : true
+            }
+        },
+
+        "Paragraph" : {
+            "tag" : "p",
+            "count" : [0, 1]
+        }
+    }
+}
