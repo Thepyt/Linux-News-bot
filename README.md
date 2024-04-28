@@ -13,6 +13,28 @@ The bot is able to
 - Verify if the article has already been posted to the server
 - If not, formats the data and sends the data as a message on a timely basis.
 
+## Instructions to Run
+To run this program, first create a discord bot (refer <a href="https://support.appreciationengine.com/support/solutions/articles/47001211829-creating-a-discord-app">here</a>). Copy the tokens after giving the bot the appropriate permissions.
+
+Create an `.env` file and paste the token there using the variable
+```env
+TOKEN=token-goes-here
+```
+Copy the channel id from the discord server where you intend to post the message. 
+
+![image](https://github.com/Thepyt/Linux-News-bot/assets/87644800/0e0c53c4-a061-42db-999e-d2af46b0ebf3)
+
+Head over to the `bot.py` file in the `Bot` directory and paste the channel id in the required place
+```python
+@self.client.event
+async def on_ready():
+    if not autosend.is_running():
+        channel_id = 0 # id goes here
+        channel =  await self.client.fetch_channel(channel_id)
+        autosend.start(channel)
+    print("Ready")
+```
+
 ## Working
 The program here is fairly straightforward. The program makes use the <a href="https://pypi.org/project/requests/">requests</a> library to access the web content of a website to which it is directed. The required data is then extracted using the <a href="https://pypi.org/project/beautifulsoup4/">BeautifulSoup</a> library. The BeautifulSoup library acts on instructions from the `config.json` file. The data is then formatted into a message using the depack class and then sent via the bot.  
 ![image](https://github.com/Thepyt/Linux-News-bot/assets/87644800/17b26041-13dc-45c1-a443-29eb7144025e)
@@ -68,13 +90,11 @@ para2
 read more: url
 ```
 
-It is then posted to discord using the <a href="https://github.com/Rapptz/discord.py">discord</a> API. The channel id needs to be updated to the users preference which can be done manually by right clicking the channel
-
-![image](https://github.com/Thepyt/Linux-News-bot/assets/87644800/0e0c53c4-a061-42db-999e-d2af46b0ebf3)
+It is then posted to discord using the <a href="https://github.com/Rapptz/discord.py">discord</a> API. The channel id needs to be updated for the users preference manually.
 
 The bot's token is stored in an `env` file which can be accessed using the `os.getenv()` command
 
 ## Future plans
 Currently
-- ways to host the bot in a server are underway
-- code cleaning is underway
+- Finding ways to host the bot in a server are underway
+- Fixing the code
