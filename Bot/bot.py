@@ -20,7 +20,8 @@ class Bot:
         @self.client.event
         async def on_ready():
             if not autosend.is_running():
-                channel =  await self.client.fetch_channel(1230507941719838764)
+                channel_id = 0 # put the id here
+                channel =  await self.client.fetch_channel(channel_id)
                 autosend.start(channel)
             print("Ready")
         
