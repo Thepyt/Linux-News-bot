@@ -1,2 +1,3 @@
 # Linux-News-bot
-A discord bot which will scrape a bunch of websites using a config file and send the news on a discord channel.
+## Project Details
+A discord bot which will scrape the title, url and the byline and first paragraph of a bunch of newsletters and send them to a discord channel. 
