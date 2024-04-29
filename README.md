@@ -45,7 +45,7 @@ The `config.json` file takes 3 major elements into consideration.
 ![image](https://github.com/Thepyt/Linux-News-bot/assets/87644800/27237482-96de-4404-8daf-12e043999862)
 
 The `config.json` has a structure similar to this
-```
+```json
 {
   "Code-of-url" : {
         "Part-of-structure" : {
@@ -73,22 +73,29 @@ while also
 - making the program overly which makes it difficult to host.
 
 The end result is a dictionary of the structure
-```
+```json
 {
-  count<int> : {
+  "Integer" : {
         "Title" : "Title",
         "Url"   : "url",
         "Paragraph" : ["para 1", "para2"]
     }
 }
 ```
-This dictionary is then unpacked using the depack module to the format of 
+This dictionary is then unpacked using the depack module. The URL which has been unpacked is then verified with the list in `url.json` which has a file structure of 
+```json
+{
+  "Code" : ["link1", "link2"]
+}
+```
+If the link exists in the url list, then a `"D"` key is added to the dictionary with a value of True. This key is then ignored. Other keys are formatted as shown below
 ```
 # Title
 **para1**
 para2
 read more: url
 ```
+This is appended into lists. Normally, depending on the config, there are two messages in a list.
 
 It is then posted to discord using the <a href="https://github.com/Rapptz/discord.py">discord</a> API. The channel id needs to be updated for the users preference manually.
 
